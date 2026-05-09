@@ -48,9 +48,18 @@ import VueNiceButton from '@vuenice/button';
 
 - Default slot: Button content (takes precedence over btnTitle)
 
-### Events
+### Events/Emits
 
-- Native button events: `@click`, `@focus`, `@blur`, etc.
+The component emits all native button events. You can listen to them using the `@` prefix:
+
+```vue
+<VueNiceButton btn-title="Click Me" @click="handleClick" @focus="handleFocus" @blur="handleBlur" />
+```
+
+Common emits:
+- `@click` - Emitted when button is clicked
+- `@focus` - Emitted when button gains focus
+- `@blur` - Emitted when button loses focus
 
 ## Examples
 

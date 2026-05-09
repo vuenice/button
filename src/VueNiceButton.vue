@@ -36,6 +36,7 @@
 
 <script setup>
 import { computed } from 'vue';
+import CommonLoader from './CommonLoader.vue';
 
 
 const props = defineProps({

@@ -1,6 +1,13 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
-import VueNiceButton from './src/VueNiceButton.vue';
+import VueNiceButton from '@/VueNiceButton.vue';
+
+// Mock CommonLoader component - use actual path now
+vi.mock('@/shared/common/CommonLoader.vue', () => ({
+  default: {
+    template: '<div class="mock-loader"></div>',
+  },
+}));
 
 describe('VueNiceButton', () => {
   it('renders with default props', () => {
